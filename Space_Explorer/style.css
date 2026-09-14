@@ -19,20 +19,278 @@ the best thing about variables, is it becomes very easy to change everything at 
   --light: #f4f4f8; /*Text on dark background */
 
   /* Spacing scale for padding. One source of truth means every gap on the site follows the same rythem. */
-  --p-1: 8px; /*the variable name p-1 */
-  --p-2: 16px; /*the variable name p-2 */
-  --p-3: 32px; /*the variable name p-3 */
+  --p-1: 10px; /*the variable name p-1 */
+  --p-2: 13px; /*the variable name p-2 */
+  --p-3: 16px; /*the variable name p-2 */
+  --p-4: 32px; /*the variable name p-3 */
 
   /* Spacing scale for margin */
-  --m-1: 8px;
-  --m-2: 16px;
-  --m-3: 32px;
+  --m-1: 10px;
+  --m-2: 13px;
+  --m-3: 16px;
+  --m-4: 32px;
 }
 
-.site-header{
-  width: 100%;
+body{
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: var(--light);
+  display: flex;
+  flex-direction: column;
+
+}
+
+header{
+  height: 70px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: var(--p-2);
+  background-color: rgba(4, 4, 10, 0.902);
+  position: sticky;
+  top: 0;
+  z-index: 3;
+}
+
+.logo{
+font-size: 22px;
+font-weight: 600;
+}
+
+header span{
+color: #00cec9;
+}
+
+.nav-bar ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--p-1);
+  list-style: none;
+}
+.nav-bar a{
+   text-decoration: none;
+   font-size: var(--p-3);
+   color: var(--light);
+   transition: color 0.3s ease-in;
+}
+
+.nav-bar a:hover{
+     color: var(--accent);
+}
+
+.hero-section{
+  background : radial-gradient(circle at top, #1a1a3a, var(--dark));
+  height: 320px;
+  padding: var(--p-1);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  z-index: 1;
+}
+
+.hero-section div{
+  position: absolute;
+  z-index: -1;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #6c5ce79c;
+  top: 80px;
+  filter: blur(5px);
+  animation: movement 2.5s linear infinite ;
+}
+
+.hero-section p{
+  color: azure;
+}
+
+.hero-section button{
+  padding: var(--p-3);
+  border-radius: 6px;
+  font-weight: 600;
+  border: none;
+  background-color: var(--accent);
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+  color: var(--light);
+}
+
+.hero-section button:hover{
+    transform : scale(1.06);
+}
+
+.planets-container{
   background-color: var(--dark);
+  color: var(--secondary);
+  text-align: center;
+  padding: 20px 80px;
+}
+
+.planets-container h3 , .mission-container h3{
+  font-size: 28px;
+}
+
+
+.planets{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+  grid-auto-rows: 220px;
+  margin-top: var(--m-4);
+  gap: 27px;
+}
+
+.planets article{
+   place-items: center;
+   padding: var(--p-3);
+   border-radius: 10px;
+   border: 2px solid transparent;
+   transition: border-color 0.3s ease-in-out;
+   cursor: pointer;
+}
+
+.planets article:hover{
+  border-color: var(--secondary);
+}
+
+.planets article > *{
+  margin-top: 20px;
+}
+
+.planets article p{
+  color: azure;
+}
+
+.planets article h4{
+  font-size: 20px;
+}
+
+.planet-shape{
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  background-color: #f4f4f8;
+  animation: rotateCircle linear 1s infinite;
+}
+
+.mercury {
+  background: radial-gradient(circle at 30% 30%, #b0b0b0, #6b6b6b);
+}
+.venus {
+  background: radial-gradient(circle at 30% 30%, #e8c07d, #a5762f);
+}
+.earth {
+  background: radial-gradient(circle at 30% 30%, #6ab7ff, #1e6b3a);
+}
+.mars {
+  background: radial-gradient(circle at 30% 30%, #ff8c66, #6b6b6b);
+}
+.jupiter {
+  background: radial-gradient(circle at 30% 30%, #e0b088, #9c6b3f);
+}
+.saturn {
+  background: radial-gradient(circle at 30% 30%, #f0d9a0, #b89b5e);
+}
+
+.mission-container{
+  background-color: var(--dark);
+  text-align: center;
+}
+
+.mission-container h3{
+  color: var(--secondary);
+}
+
+.mission-highlights{
+  display: grid;
+  grid-template-columns: repeat(4, minmax(220px, 1fr));
+  grid-auto-rows: (150px , auto);
+gap: 10px;
+margin: 20px auto;
+padding: 20px;
+
+}
+
+.mission-highlights article{
+  padding: 50px;
+  background-color: rgba(255, 255, 255, 0.04);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in;
+}
+
+.mission-highlights article:hover{
+  background-color: rgba(108, 92, 231, 0.25);
+}
+
+.mission-highlights h5{
+  font-size: var(--m-3);
+  color: var(--secondary);
+}
+
+.deep-space{
+  display: flex;
+  flex-direction: column;
+  grid-column: 1/3;
+  grid-row: 1/3;
+  justify-content: space-between;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+}
+
+.deep-space h5{
+  color: white;
+}
+
+.launhc-systems{
+  grid-column: 3/5;
+}
+
+.numbers{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+  grid-auto-rows: 200px;
+  gap: 10px;
+  padding: var(--m-4);
+}
+
+.numbers article{
+  background-color: rgba(255, 255, 255, 0.04);
+  text-align: center;
+   border-radius: 10px;
+   place-items: center;
+}
+
+.numbers article h3{
+  margin-top: 70px;
+  color: var(--accent);
+}
+
+footer{
+  background-color: #191930;
+  padding: var(--p-4);
+  text-align: center;
+}
+
+
+@keyframes movement {
+  0%{
+    transform: translateY(0);
+  }
+  50%{
+    transform: translateY(8px);
+  }
+  100%{
+    transform: translateY(0);
+  }
+}
+
+@keyframes rotateCircle {
+  0%{
+    transform: rotate(0);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
 }
