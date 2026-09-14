@@ -34,42 +34,37 @@ the best thing about variables, is it becomes very easy to change everything at 
 body{
   font-family: 'Segoe UI', Arial, sans-serif;
   color: var(--light);
-  display: flex;
-  flex-direction: column;
-
 }
 
 header{
-  height: 70px;
-  display: flex;
+  /* display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: var(--p-2);
+  align-items: center; 
+  padding: var(--p-3);
+  position: sticky;*/
   background-color: rgba(4, 4, 10, 0.902);
-  position: sticky;
-  top: 0;
-  z-index: 3;
 }
 
-.logo{
+/* .logo{
 font-size: 22px;
 font-weight: 600;
-}
+} */
 
 header span{
 color: #00cec9;
 }
 
 .nav-bar ul{
-  display: flex;
+  /* display: flex;
   justify-content: center;
   align-items: center;
-  gap: var(--p-1);
-  list-style: none;
+  margin-top: var(--m-2);
+  gap: var(--p-1); 
+  list-style: none;*/
 }
 .nav-bar a{
-   text-decoration: none;
-   font-size: var(--p-3);
+   /* text-decoration: none;
+   font-size: var(--p-3); */
    color: var(--light);
    transition: color 0.3s ease-in;
 }
@@ -81,22 +76,22 @@ color: #00cec9;
 .hero-section{
   background : radial-gradient(circle at top, #1a1a3a, var(--dark));
   height: 320px;
-  padding: var(--p-1);
+  /* padding: var(--p-1);
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 30px;
-  z-index: 1;
+  gap: 30px; 
+  z-index: 1;*/
 }
 
 .hero-section div{
-  position: absolute;
-  z-index: -1;
+  /* position: absolute;
+  z-index: -1; */
   width: 60px;
   height: 60px;
-  border-radius: 50%;
+  /* border-radius: 50%; */ 
   background-color: #6c5ce79c;
   top: 80px;
   filter: blur(5px);
@@ -108,10 +103,10 @@ color: #00cec9;
 }
 
 .hero-section button{
-  padding: var(--p-3);
+  /* padding: var(--p-3);
   border-radius: 6px;
   font-weight: 600;
-  border: none;
+  border: none; */
   background-color: var(--accent);
   transition: transform 0.3s ease-in-out;
   cursor: pointer;
@@ -125,22 +120,22 @@ color: #00cec9;
 .planets-container{
   background-color: var(--dark);
   color: var(--secondary);
-  text-align: center;
-  padding: 20px 80px;
+  /* text-align: center;
+  padding: 20px 80px; */
 }
 
 .planets-container h3 , .mission-container h3{
-  font-size: 28px;
+  /* font-size: 28px; */
 }
 
 
-.planets{
+/* .planets{
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
   grid-auto-rows: 220px;
   margin-top: var(--m-4);
   gap: 27px;
-}
+} */
 
 .planets article{
    place-items: center;
