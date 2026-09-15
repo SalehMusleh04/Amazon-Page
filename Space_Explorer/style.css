@@ -5,26 +5,19 @@
   padding: 0;
 }
 
-/* CSS VARIABLES (custome properties) */
-/* Declared once inside :root (the top of the document) and reused everywhere with var().
-change a value here and it update across the WHOLE site. This is how we keep colors and spacing consistent
-the best thing about variables, is it becomes very easy to change everything at once without having to go over every where it exist */
-
 :root {
-  /* Color Systme */
-  --primary: #6c5ce7; /*Branding main color*/
-  --secondary: #00cec9; /*Branding secondary color*/
-  --accent: #fd79a8; /*accent color is used for calls to action*/
-  --dark: #0d0d1a; /* Page background */
-  --light: #f4f4f8; /*Text on dark background */
 
-  /* Spacing scale for padding. One source of truth means every gap on the site follows the same rythem. */
-  --p-1: 10px; /*the variable name p-1 */
-  --p-2: 13px; /*the variable name p-2 */
-  --p-3: 16px; /*the variable name p-2 */
-  --p-4: 32px; /*the variable name p-3 */
+  --primary: #6c5ce7; 
+  --secondary: #00cec9; 
+  --accent: #fd79a8; 
+  --dark: #0d0d1a; 
+  --light: #f4f4f8; 
 
-  /* Spacing scale for margin */
+  --p-1: 10px; 
+  --p-2: 13px; 
+  --p-3: 16px; 
+  --p-4: 32px; 
+
   --m-1: 10px;
   --m-2: 13px;
   --m-3: 16px;
